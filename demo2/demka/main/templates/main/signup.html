@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/reg.css' %}">
+    <title> {% block title %}{% endblock %} </title>
+</head>
+
+<body>
+<div class="bar">
+        <div class="logo">
+            <h1>VOLVO TRUCK</h1>
+        </div>
+        <div class="buttons">
+            <button><h3><a href="{% url 'login' %}">Авторизация</a></h3></button>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="text"><h1>Регистрация нового пользователя</h1></div>
+
+    <form method="POST" class="signup-form my-form">
+        {% csrf_token %}
+        <div class="form-block">
+            <div class="forms">
+                <div class="forms-1">
+                    <input type="text" id="username" name="username" placeholder="Логин">
+                    <input type="email" id="email" name="email" placeholder="Почта">
+                </div>
+                <div class="forms-2">
+                    <input type="password" id="password1" name="password1" placeholder="Пароль">
+                    <input type="password" id="password2" name="password2" placeholder="Повтор пароля">
+                </div>
+                <div class="forms-3">
+                    <input type="tel" id="phone" name="phone" placeholder="Номер телефона">
+                </div>
+            </div>
+
+            <div class="b-reg">
+                <button class="btn"><h3>Зарегестрироваться</h3></button>
+            </div>
+            <div class="form-button">
+                <p>Есть аккаунт?<button><h3><a href="{% url 'login' %}">Авторизация</a></h3></button></p>
+            </div>
+        </div>
+    </form>
+
+    <div class="form-img">
+        <img src="{% static 'image/image1.jpg' %}">
+    </div>
+
+    <div class="line-2"></div>
+
+    <div class="footer">
+        <div class="logo">
+            <h1>VOLVO TRUCK</h1>
+        </div>
+        <div class="img2">
+            <h2>Volvo@gmail.com</h2>
+        </div>
+        <div class="img3">
+            <h2>+7 (968) 714-4502</h2>
+        </div>
+    </div>

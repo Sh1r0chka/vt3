@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/ticket.css' %}">
+    <title> {% block title %}{% endblock %} </title>
+</head>
+
+<body>
+
+    <div class="bar">
+        <div class="logo">
+            <h1>VOLVO TRUCK</h1>
+        </div>
+        <div class="buttons">
+            <button><h3><a href="">Главная</a></h3></button>
+            <button><h3><a href="">Каталог</a></h3></button>
+            <button><h3><a href="{% url 'logout' %}">Выход</a></h3></button>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="text"><h1>Ваши заказы</h1></div>
+
+    <div class="form-img">
+        <img src="{% static 'image/image1.jpg' %}">
+    </div>
+
+    <div class="line-2"></div>
+
+    <div class="footer">
+        <div class="logo">
+            <h1>VOLVO TRUCK</h1>
+        </div>
+        <div class="img2">
+            <h2>Volvo@gmail.com</h2>
+        </div>
+        <div class="img3">
+            <h2>+7 (968) 714-4502</h2>
+        </div>
+    </div>
+
+</body>
+
+</html>
